@@ -230,7 +230,7 @@ namespace horizon {
 		view_create.signal_valid_change().connect([this] (bool v) {button_create->set_sensitive(v);});
 		label_gitversion->set_label(gitversion);
 
-		set_icon(Gdk::Pixbuf::create_from_resource("/net/carrotIndustries/horizon/icon.svg"));
+		set_icon(Gdk::Pixbuf::create_from_resource("/net/carrotIndustries/horizon/src/icon.svg"));
 
 		sock_project.bind("tcp://127.0.0.1:*");
 		char ep[1024];
@@ -473,7 +473,7 @@ namespace horizon {
 
 	ProjectManagerAppWindow* ProjectManagerAppWindow::create(ProjectManagerApplication *app) {
 		// Load the Builder file and instantiate its widgets.
-		auto refBuilder = Gtk::Builder::create_from_resource("/net/carrotIndustries/horizon/prj-mgr/window.ui");
+		auto refBuilder = Gtk::Builder::create_from_resource("/net/carrotIndustries/horizon/src/prj-mgr/window.ui");
 
 		ProjectManagerAppWindow* window = nullptr;
 		refBuilder->get_widget_derived("app_window", window, app);

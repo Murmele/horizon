@@ -26,3 +26,7 @@ dist
 *.trace
 docs
 */__pycache__
+build
+bin
+lib
+

@@ -19,7 +19,7 @@ namespace horizon {
 	}
 
 	ProjectManagerApplication::ProjectManagerApplication():
-			Gtk::Application("net.carrotIndustries.horizon.prj-mgr", Gio::APPLICATION_HANDLES_OPEN), sock_broadcast(zctx, ZMQ_PUB)
+			Gtk::Application("net.carrotIndustries.horizon.src.prj-mgr", Gio::APPLICATION_HANDLES_OPEN), sock_broadcast(zctx, ZMQ_PUB)
 	{
 		sock_broadcast.bind("tcp://127.0.0.1:*");
 		char ep[1024];
@@ -96,7 +96,7 @@ namespace horizon {
 		set_accel_for_action("app.quit", "<Ctrl>Q");
 
 		auto refBuilder = Gtk::Builder::create();
-		refBuilder->add_from_resource("/net/carrotIndustries/horizon/prj-mgr/app_menu.ui");
+		refBuilder->add_from_resource("/net/carrotIndustries/horizon/src/prj-mgr/app_menu.ui");
 
 
 		auto object = refBuilder->get_object("appmenu");
@@ -133,7 +133,7 @@ namespace horizon {
 
 		}
 
-		Gtk::IconTheme::get_default()->add_resource_path("/net/carrotIndustries/horizon/icons");
+		Gtk::IconTheme::get_default()->add_resource_path("/net/carrotIndustries/horizon/src/icons");
 
 		signal_shutdown().connect(sigc::mem_fun(this, &ProjectManagerApplication::on_shutdown));
 	}

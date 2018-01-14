@@ -901,7 +901,7 @@ namespace horizon {
 	PartWizard* PartWizard::create(const Package *p, const std::string &bp, class Pool *po) {
 		PartWizard* w;
 		Glib::RefPtr<Gtk::Builder> x = Gtk::Builder::create();
-		x->add_from_resource("/net/carrotIndustries/horizon/pool-mgr/part_wizard/part_wizard.ui");
+		x->add_from_resource("/net/carrotIndustries/horizon/src/pool-mgr/part_wizard/part_wizard.ui");
 		x->get_widget_derived("part_wizard", w, p, bp, po);
 		return w;
 	}

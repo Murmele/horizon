@@ -85,7 +85,7 @@ namespace horizon {
 	PadEditor* PadEditor::create(const Pad *p, PartWizard *pa) {
 		PadEditor* w;
 		Glib::RefPtr<Gtk::Builder> x = Gtk::Builder::create();
-		x->add_from_resource("/net/carrotIndustries/horizon/pool-mgr/part_wizard/part_wizard.ui");
+		x->add_from_resource("/net/carrotIndustries/horizon/src/pool-mgr/part_wizard/part_wizard.ui");
 		x->get_widget_derived("pad_editor", w, p, pa);
 		w->reference();
 		return w;

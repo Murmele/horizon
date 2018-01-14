@@ -44,7 +44,7 @@ int main(int c_argc, char *c_argv[]) {
 	{
 		SQLite::Query q(db_parametric, "SELECT name FROM sqlite_master WHERE type='table' AND name='resistors'");
 		if(!q.step()) { //db is likely empty
-			auto bytes = Gio::Resource::lookup_data_global("/net/carrotIndustries/horizon/pool-update-parametric/schema.sql");
+			auto bytes = Gio::Resource::lookup_data_global("/net/carrotIndustries/horizon/src/pool-update-parametric/schema.sql");
 			gsize size {bytes->get_size()+1};//null byte
 			auto data = (const char*)bytes->get_data(size);
 			db_parametric.execute(data);
