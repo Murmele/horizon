@@ -7,7 +7,7 @@ namespace horizon {
 	void RuleEditorHoleSize::populate() {
 		rule2 = dynamic_cast<RuleHoleSize*>(rule);
 
-		builder = Gtk::Builder::create_from_resource("/net/carrotIndustries/horizon/src/imp/rules/rule_editor_hole_size.ui");
+		builder = Gtk::Builder::create_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/rules/rule_editor_hole_size.ui");
 		Gtk::Box *editor;
 		builder->get_widget("editor", editor);
 		pack_start(*editor, true, true, 0);

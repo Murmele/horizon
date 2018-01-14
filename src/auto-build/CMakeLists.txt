@@ -6,4 +6,3 @@ add_custom_command(
 )
 
 ADD_LIBRARY(auto-build gitversion.cpp)
-ADD_DEPENDENCIES(auto-build resource)

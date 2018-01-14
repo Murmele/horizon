@@ -359,7 +359,7 @@ namespace horizon {
 
 		app->signal_startup().connect([this, app] {
 			auto refBuilder = Gtk::Builder::create();
-			refBuilder->add_from_resource("/net/carrotIndustries/horizon/src/imp/app_menu.ui");
+			refBuilder->add_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/app_menu.ui");
 
 			auto object = refBuilder->get_object("appmenu");
 			auto app_menu = Glib::RefPtr<Gio::MenuModel>::cast_dynamic(object);

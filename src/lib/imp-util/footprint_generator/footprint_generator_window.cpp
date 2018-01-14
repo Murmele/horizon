@@ -26,7 +26,7 @@ namespace horizon {
 	FootprintGeneratorWindow* FootprintGeneratorWindow::create(Gtk::Window *p, CorePackage *c) {
 		FootprintGeneratorWindow* w;
 		Glib::RefPtr<Gtk::Builder> x = Gtk::Builder::create();
-		x->add_from_resource("/net/carrotIndustries/horizon/src/imp/footprint_generator/footprint_generator.ui");
+		x->add_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/footprint_generator/footprint_generator.ui");
 		x->get_widget_derived("window", w);
 		x->get_widget("stack", w->stack);
 		x->get_widget("generate_button", w->generate_button);

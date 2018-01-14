@@ -3,7 +3,7 @@
 #include "util/util.hpp"
 
 namespace horizon {
-	FootprintGeneratorDual::FootprintGeneratorDual(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorDual)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/imp/footprint_generator/dual.svg", c) {
+	FootprintGeneratorDual::FootprintGeneratorDual(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorDual)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/lib/imp-util/footprint_generator/dual.svg", c) {
 
 
 			{

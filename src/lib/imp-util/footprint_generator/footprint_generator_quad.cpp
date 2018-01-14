@@ -2,7 +2,7 @@
 #include "widgets/chooser_buttons.hpp"
 
 namespace horizon {
-	FootprintGeneratorQuad::FootprintGeneratorQuad(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorQuad)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/imp/footprint_generator/quad.svg", c) {
+	FootprintGeneratorQuad::FootprintGeneratorQuad(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorQuad)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/lib/imp-util/footprint_generator/quad.svg", c) {
 			update_preview();
 			sp_spacing_h = Gtk::manage(new SpinButtonDim());
 			sp_spacing_h->set_range(0, 100_mm);

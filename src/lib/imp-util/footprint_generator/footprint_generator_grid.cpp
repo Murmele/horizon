@@ -2,7 +2,7 @@
 #include "widgets/chooser_buttons.hpp"
 
 namespace horizon {
-	FootprintGeneratorGrid::FootprintGeneratorGrid(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorGrid)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/imp/footprint_generator/grid.svg", c) {
+	FootprintGeneratorGrid::FootprintGeneratorGrid(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorGrid)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/lib/imp-util/footprint_generator/grid.svg", c) {
 			update_preview();
 
 			sp_pitch_h = Gtk::manage(new SpinButtonDim());

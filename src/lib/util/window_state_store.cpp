@@ -12,7 +12,7 @@ namespace horizon {
 			int user_version = db.get_user_version();
 			if(user_version < min_user_version) {
 				//update schema
-				auto bytes = Gio::Resource::lookup_data_global("/net/carrotIndustries/horizon/src/util/window_state_schema.sql");
+				auto bytes = Gio::Resource::lookup_data_global("/net/carrotIndustries/horizon/src/lib/util/window_state_schema.sql");
 				gsize size {bytes->get_size()+1};//null byte
 				auto data = (const char*)bytes->get_data(size);
 				db.execute(data);

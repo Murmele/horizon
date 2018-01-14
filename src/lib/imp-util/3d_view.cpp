@@ -7,7 +7,7 @@ namespace horizon {
 	View3DWindow* View3DWindow::create(const class Board *b, class Pool *p) {
 		View3DWindow* w;
 		Glib::RefPtr<Gtk::Builder> x = Gtk::Builder::create();
-		x->add_from_resource("/net/carrotIndustries/horizon/src/imp/3d_view.ui");
+		x->add_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/3d_view.ui");
 		x->get_widget_derived("window", w, b, p);
 
 		return w;

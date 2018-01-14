@@ -9,4 +9,3 @@ ADD_SUBDIRECTORY(pool-update-parametric)
 ADD_SUBDIRECTORY(pool-util)
 ADD_SUBDIRECTORY(prj-mgr)
 ADD_SUBDIRECTORY(prj-util)
-

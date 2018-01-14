@@ -2,7 +2,7 @@
 #include "widgets/chooser_buttons.hpp"
 
 namespace horizon {
-	FootprintGeneratorSingle::FootprintGeneratorSingle(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorSingle)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/imp/footprint_generator/single.svg", c) {
+	FootprintGeneratorSingle::FootprintGeneratorSingle(CorePackage *c): Glib::ObjectBase (typeid(FootprintGeneratorSingle)), FootprintGeneratorBase("/net/carrotIndustries/horizon/src/lib/imp-util/footprint_generator/single.svg", c) {
 
 			{
 				auto tbox = Gtk::manage(new Gtk::Box(Gtk::ORIENTATION_HORIZONTAL, 4));

@@ -8,7 +8,7 @@ namespace horizon {
 	void RuleEditorTrackWidth::populate() {
 		rule2 = dynamic_cast<RuleTrackWidth*>(rule);
 
-		builder = Gtk::Builder::create_from_resource("/net/carrotIndustries/horizon/src/imp/rules/rule_editor_track_width.ui");
+		builder = Gtk::Builder::create_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/rules/rule_editor_track_width.ui");
 		Gtk::Box *editor;
 		builder->get_widget("editor", editor);
 		pack_start(*editor, true, true, 0);

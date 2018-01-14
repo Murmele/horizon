@@ -67,17 +67,18 @@ set(RESOURCE_LIST
 	src/canvas/wall-fragment.glsl
 	src/canvas/wall-geometry.glsl)
 
+SET(RESOURCE_CPP "${CMAKE_CURRENT_BINARY_DIR}/resources.c")
 
 compile_gresources(RESOURCE_FILE
                    CML_OUT
-                   TARGET resources.c
+                   TARGET ${RESOURCE_CPP}
                    TYPE EMBED_C
                    RESOURCES ${RESOURCE_LIST}
                    PREFIX "/net/carrotIndustries/horizon")
 
-add_custom_target(resource ALL DEPENDS ${RESOURCE_FILE})
+ADD_CUSTOM_TARGET(resource ALL DEPENDS ${RESOURCE_FILE})
 
-set(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_CXX_STANDARD 14)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
@@ -124,7 +125,7 @@ INCLUDE_DIRECTORIES(/opt/opencascade/inc/)
 LINK_DIRECTORIES(/opt/opencascade/lib/)
 
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
+SET(CMAKE_CXX_FLAGS "-g3")
 
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(3rd_party)
-

@@ -403,7 +403,7 @@ namespace horizon {
 	RulesWindow* RulesWindow::create(Gtk::Window *p, CanvasGL *ca, Rules *ru, Core *c) {
 		RulesWindow* w;
 		Glib::RefPtr<Gtk::Builder> x = Gtk::Builder::create();
-		x->add_from_resource("/net/carrotIndustries/horizon/src/imp/rules/rules_window.ui");
+		x->add_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/rules/rules_window.ui");
 		x->get_widget_derived("window", w, ca, ru, c);
 		w->set_transient_for(*p);
 		return w;

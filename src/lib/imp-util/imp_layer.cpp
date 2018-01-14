@@ -56,7 +56,7 @@ namespace horizon {
 			}
 		}
 		if(!layers_loaded) {
-			layer_box->load_from_json(json_from_resource("/net/carrotIndustries/horizon/src/imp/layer_display_default.json"));
+			layer_box->load_from_json(json_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/layer_display_default.json"));
 		}
 	}
 }

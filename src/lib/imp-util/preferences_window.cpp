@@ -86,7 +86,7 @@ namespace horizon {
 		CanvasPreferencesEditor* w;
 		Glib::RefPtr<Gtk::Builder> x = Gtk::Builder::create();
 		std::vector<Glib::ustring> widgets = {"canvas_grid", "adjustment1", "adjustment2", "adjustment3", "adjustment4"};
-		x->add_from_resource("/net/carrotIndustries/horizon/src/imp/preferences.ui", widgets);
+		x->add_from_resource("/net/carrotIndustries/horizon/src/lib/imp-util/preferences.ui", widgets);
 		x->get_widget_derived("canvas_grid", w, prefs, canvas_prefs);
 		w->reference();
 		return w;
