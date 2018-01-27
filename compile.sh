@@ -2,7 +2,6 @@
 
 mkdir build
 cd build
-touch resources.c
-cmake ..
+cmake .. -G "Unix Makefiles"
 make -j 10
 
