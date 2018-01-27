@@ -110,7 +110,7 @@ pkg_check_modules(CAIROMM REQUIRED cairomm-pdf-1.0)
 pkg_check_modules(GIT     REQUIRED libgit2)
 pkg_check_modules(CURL    REQUIRED libcurl)
 pkg_check_modules(GLM     REQUIRED glm)
-pkg_check_modules(GLIB     REQUIRED glib-2.0)
+pkg_check_modules(GLIB    REQUIRED glib-2.0)
 pkg_check_modules(GLM     REQUIRED glm)
 
 INCLUDE_DIRECTORIES(${UUID_INCLUDE_DIRS})
