@@ -1,0 +1,55 @@
+{
+  "app-id": "com.github.carrotIndustries.horizon",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "3.26",
+  "sdk": "org.gnome.Sdk",
+  "command": "horizon-imp",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+    "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+    "--own-name=net.carrotIndustries.Horizon.pool-mgr",
+    "--own-name=net.carrotIndustries.Horizon.prj-mgr",
+    "--filesystem=home"],
+    "rename-icon":"horizon-eda", /*Image will renamed to match the app-id konvention*/
+    "rename-desktop-file":"horizon.desktop", /* File will renamed to match the app-id konvention*/
+    "rename-appdata-file": "horizon.appdata.xml",
+    "modules": [
+      "modules/gtkmm.json",
+      "modules/yaml_cpp.json",
+      "modules/boost.json",
+      "modules/cairomm.json",
+      "modules/pangomm.json",
+      "modules/gtkmm3.json",
+      "modules/glm.json",
+      "modules/lib-git2.json",
+      "modules/zeromq.json",
+      "modules/oce.json",
+      {
+        "name": "horizon",
+        "buildsystem": "cmake",
+        "no-make-install" : true,
+        "build-commands" : ["install -Dm755 bin/* /app/bin/"],
+        "sources": [
+          {
+            "type": "git",
+            "url": "https://github.com/jsparber/horizon.git",
+            "branch": "switch_to_cmake"
+          }
+        ]
+      },
+      {
+        "name": "horizon-desktop",
+        "buildsystem": "simple",
+        "build-commands":["install -Dm755 horizon.desktop /app/share/applications/horizon.desktop"],
+        "sources": [
+          {
+            "type": "file",
+            "path": "horizon.desktop"
+          }
+        ]
+      }
+    ]
+}
