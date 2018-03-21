@@ -1,5 +1,5 @@
 {
-  "app-id": "com.github.carrotIndustries.horizon",
+  "app-id": "com.github.carrotIndustries.Horizon",
   "runtime": "org.gnome.Platform",
   "runtime-version": "3.26",
   "sdk": "org.gnome.Sdk",
@@ -35,21 +35,32 @@
         "sources": [
           {
             "type": "git",
-            "url": "https://github.com/jsparber/horizon.git",
+            "url": "https://github.com/Murmele/horizon.git",
             "branch": "switch_to_cmake"
           }
         ]
       },
-      {
-        "name": "horizon-desktop",
-        "buildsystem": "simple",
-        "build-commands":["install -Dm755 horizon.desktop /app/share/applications/horizon.desktop"],
-        "sources": [
-          {
-            "type": "file",
-            "path": "horizon.desktop"
-          }
-        ]
-      }
+		{
+			"name": "horizon-files",
+			"buildsystem": "simple",
+			"build-commands" : ["install -Dm755 ressources/linux/mime/applications/horizon.desktop /app/share/applications/horizon.desktop",
+								"install -Dm755 ressources/linux/horizon.appdata.xml /app/share/metainfo/horizon.appdata.xml",
+								"install -Dm755 src/icons/16x16/apps/horizon-eda.png /app/share/icons/hicolor/16x16/apps/horizon-eda.png",
+								"install -Dm755 src/icons/32x32/apps/horizon-eda.png /app/share/icons/hicolor/32x32/apps/horizon-eda.png",
+								"install -Dm755 src/icons/64x64/apps/horizon-eda.png /app/share/icons/hicolor/64x64/apps/horizon-eda.png",
+								"install -Dm755 src/icons/256x256/apps/horizon-eda.png /app/share/icons/hicolor/256x256/apps/horizon-eda.png",
+								"install -Dm755 src/icons/scalable/apps/horizon-eda.svg /app/share/icons/hicolor/scalable/apps/horizon-eda.svg",
+								"install -Dm755 src/icons/scalable/actions/action-link-symbolic.svg /app/share/icons/hicolor/scalable/actions/action-link-symbolic.svg",
+								"install -Dm755 src/icons/scalable/actions/action-unlink-symbolic.svg /app/share/icons/hicolor/scalable/actions/action-unlink-symbolic.svg",
+								"install -Dm755 src/icons/scalable/actions/edit-board-symbolic.svg /app/share/icons/hicolor/scalable/actions/edit-board-symbolic.svg",
+								"install -Dm755 src/icons/scalable/actions/edit-schematic-symbolic.svg /app/share/icons/hicolor/scalable/actions/edit-schematic-symbolic.svg"],
+			"sources": [
+			  {
+				"type": "git",
+				"url": "https://github.com/Murmele/horizon.git",
+				"branch": "switch_to_cmake"
+			  }
+        	]
+		}	
     ]
 }

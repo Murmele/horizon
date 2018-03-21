@@ -1,13 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=horizon
+Name=Horizon
 Comment=Free EDA package
-Exec=horizon -- %u
+Exec=horizon-pool-mgr
 StartupWMClass=horizon
-Icon=com.github.horizon
+Icon=com.github.carrotIndustries.Horizon
 Terminal=false
 Type=Application
 Categories=Development;Electronics;
 X-Desktop-File-Install-Version=0.1
 GenericName=EDA Suite
-Name[de_DE]=horizon
+Name[de_DE]=Horizon
