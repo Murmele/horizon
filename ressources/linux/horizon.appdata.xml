@@ -29,10 +29,9 @@
   </screenshots>
 
   <url type="homepage">https://github.com/carrotIndustries/horizon</url>
-  <project_group>Marker</project_group>
 
   <provides>
-    <binary>marker</binary>
+    <binary>horizon-prj-mgr</binary>
     <id>net.carrotIndustries.horizon</id>
   </provides>
 
