@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 Martin Marmsoler <martin.marmsoler@gmail.com> -->
 <component type="desktop-application">
-  <id>com.github.carrotIndustries.Horizon</id>
+  <id>net.carrotIndustries.horizon</id>
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-3.0</project_license>
   <name>Horizon</name>
@@ -20,7 +19,7 @@
     </ul>
   </description>
 
-  <launchable type="desktop-id">com.github.carrotIndustries.Horizon.desktop</launchable>
+  <launchable type="desktop-id">net.carrotIndustries.horizon.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">
@@ -34,7 +33,7 @@
 
   <provides>
     <binary>marker</binary>
-    <id>com.github.carrotIndustries.Horizon</id>
+    <id>net.carrotIndustries.horizon</id>
   </provides>
 
   <releases>
