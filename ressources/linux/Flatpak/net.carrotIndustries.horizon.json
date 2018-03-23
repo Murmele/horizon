@@ -6,6 +6,7 @@
   "command": "horizon-prj-mgr",
   "finish-args": [
     "--socket=wayland",
+	"--socket=x11",
     "--share=network",
     "--device=dri",
     "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
@@ -15,6 +16,7 @@
     "--filesystem=home"],
     "rename-icon":"horizon-eda", /*Image will renamed to match the app-id konvention*/
     "rename-appdata-file": "horizon.appdata.xml",
+	"rename-desktop-file": "net.carrotIndustries.horizon.horizon-pool-mgr.desktop",
     "modules": [
       "modules/gtkmm.json",
       "modules/yaml_cpp.json",
@@ -42,8 +44,8 @@
 		{
 			"name": "horizon-files",
 			"buildsystem": "simple",
-			"build-commands" : ["install -Dm755 ressources/linux/mime/applications/net.carrotIndustries.horizon.horizon-pool-mgr.desktop /app/share/applications/net.carrotIndustries.horizon.horizon-pool-mgr.desktop",
-								"install -Dm755 ressources/linux/mime/applications/net.carrotIndustries.horizon.horizon-prj-mgr.desktop /app/share/applications/net.carrotIndustries.horizon.horizon-prj-mgr.desktop",
+			"build-commands" : ["desktop-file-install --dir=/app/share/applications ressources/linux/mime/applications/net.carrotIndustries.horizon.horizon-pool-mgr.desktop",
+								"desktop-file-install --dir=/app/share/applications ressources/linux/mime/applications/net.carrotIndustries.horizon.horizon-prj-mgr.desktop",
 								"install -Dm755 ressources/linux/horizon.appdata.xml /app/share/metainfo/horizon.appdata.xml",
 								"install -Dm755 src/icons/16x16/apps/horizon-eda.png /app/share/icons/hicolor/16x16/apps/horizon-eda.png",
 								"install -Dm755 src/icons/32x32/apps/horizon-eda.png /app/share/icons/hicolor/32x32/apps/horizon-eda.png",
